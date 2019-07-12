@@ -1,6 +1,6 @@
 <div class="col-md-12">
   <div class="booking">
-    <%= link_to("Book New Seat", '#', class: "btn btn-primary pull-left") %>
+    <%= link_to("Book New Seat", new_booking_path, class: "btn btn-primary pull-left") %>
   </div>
   <table class="table table-hover">
     <thead>
@@ -19,7 +19,7 @@
           <td><%= booking.date_from %></td>
           <td><%= booking.date_to %></td>
           <td>
-              <%= link_to("View", '#', class: "btn btn-sm btn-default")%>
+              <%= link_to("View", booking_path(booking), class: "btn btn-sm btn-default")%>
           </td>
         </tr>
       <% end %>

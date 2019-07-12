@@ -1,0 +1,9 @@
+<div class="col-md-12">
+  <p> Name : <%= @booking.name %></p>
+  <p> Desk : <%= @booking.desk %></p>
+  <p> DateFrom : <%= @booking.date_from.strftime("%Y/%m/%d") %></p>
+  <p> DateTo : <%= @booking.date_to.strftime("%Y/%m/%d") %></p>
+  <div class="booking">
+    <%= link_to("Back", bookings_path, class: "btn btn-primary pull-left")%>
+  </div>
+</div>

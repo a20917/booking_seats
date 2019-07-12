@@ -1,0 +1,13 @@
+<%= simple_form_for @booking do |f| %>
+  <div class="form-group">
+    <%= f.input :desk, :collection => @seats%>
+    <%= f.text_field :date_from, :id => "datepicker_from", :value => Date.today %>
+    <%= f.text_field :date_to, :id => "datepicker_to", :value => Date.today + 1.day %>
+  </div>
+  <%= f.submit "Book", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>
+<% end %>
+
+<script>
+$('#datepicker_from').datepicker({format: 'yyyy-mm-dd'});
+$('#datepicker_to').datepicker({format: 'yyyy-mm-dd'});
+</script>
