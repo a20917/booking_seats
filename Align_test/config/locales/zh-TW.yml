@@ -1,0 +1,8 @@
+zh-TW:
+  activerecord:
+    attributes:
+      user:
+        nickname: "暱稱"
+        email: "信箱"
+        password: "密碼"
+        password_confirmation: "重複密碼"

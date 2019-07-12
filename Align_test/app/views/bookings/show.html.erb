@@ -4,6 +4,9 @@
   <p> Desk : <%= @booking.desk %></p>
   <p> Date : <%= @booking.date_from.strftime("%d %b") %> - <%= @booking.date_to.strftime("%d %b") %></p>
   <div class="booking">
-    <%= link_to("Back", bookings_path, class: "btn btn-primary pull-left")%>
+    <% if current_user && current_user == @booking.user %>
+      <%= link_to("Edit", edit_booking_path(@booking), class: "btn btn-primary")%>
+    <% end %>
+    <%= link_to("Back", bookings_path, class: "btn btn-primary")%>
   </div>
 </div>
