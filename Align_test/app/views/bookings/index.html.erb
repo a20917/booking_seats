@@ -2,22 +2,24 @@
   <div class="booking">
     <%= link_to("Book New Seat", new_booking_path, class: "btn btn-primary pull-left") %>
   </div>
+  <br><br>
   <table class="table table-hover">
-    <thead>
+    <thead bgcolor = "#337ab7">
       <tr>
-        <td>Name</td>
-        <td>Desk</td>
-        <td>DateFrom</td>
-        <td>DateTo</td>
+        <div>
+          <td style="color: #ffffff">Name</td>
+          <td style="color: #ffffff">Desk</td>
+          <td style="color: #ffffff">From/To</td>
+          <td style="color: #ffffff"></td>
+        </div>
       </tr>
     </thead>
     <tbody>
       <% @bookings.each do |booking| %>
         <tr>
-          <td><%= booking.name %></td>
+          <td><%= booking.user.nickname %></td>
           <td><%= booking.desk %></td>
-          <td><%= booking.date_from %></td>
-          <td><%= booking.date_to %></td>
+          <td><%= booking.date_from.strftime("%d/%b") %> - <%= booking.date_to.strftime("%d/%b") %></td>
           <td>
               <%= link_to("View", booking_path(booking), class: "btn btn-sm btn-default")%>
           </td>

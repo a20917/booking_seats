@@ -20,7 +20,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.name = current_user.nickname
+    @booking.user_id = current_user[:id]
     if @booking.save
       redirect_to bookings_path
     else

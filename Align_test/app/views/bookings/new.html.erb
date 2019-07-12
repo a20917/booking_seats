@@ -8,6 +8,9 @@
 <% end %>
 
 <script>
-$('#datepicker_from').datepicker({format: 'yyyy-mm-dd'});
+$('#datepicker_from').datepicker({
+  format: 'yyyy-mm-dd',
+  minDate: Date.today
+});
 $('#datepicker_to').datepicker({format: 'yyyy-mm-dd'});
 </script>
