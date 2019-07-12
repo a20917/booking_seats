@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  desk: MyString
+  date_from: 2019-07-12 11:44:08
+  date_to: 2019-07-12 11:44:08
+
+two:
+  name: MyString
+  desk: MyString
+  date_from: 2019-07-12 11:44:08
+  date_to: 2019-07-12 11:44:08
