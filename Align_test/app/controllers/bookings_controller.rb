@@ -1,4 +1,5 @@
 class BookingsController < ApplicationController
+  before_action :authenticate_user! , only: [:new]
   def index
     @bookings = Booking.all
   end
@@ -19,7 +20,7 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.name = "Nick"
+    @booking.name = current_user.nickname
     if @booking.save
       redirect_to bookings_path
     else
